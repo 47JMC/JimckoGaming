@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JimckoGaming</title>
+    <link rel="shortcut icon" href="JGlogo.png" type="image/x-icon">
+</head>
+<body>
+    <style>
+        body {
+            background-color: #003C43;
+            text-align: center;
+        }
+        .web-heading {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #1F6E8C;
+            color: darkslategray;
+            text-decoration: underline ;
+            text-align: center;
+            font-size: 50px;
+        }
+        /* Poki Box */
+        .pokiboxdiv {
+            width: 125px;
+            height: 175px;
+            border-radius: 8%;
+            background-color: #032c31;
+            position: absolute;
+            right: 725px;
+            cursor: pointer;
+        }
+        .frivboxdiv {
+            width: 125px;
+            height: 175px;
+            border-radius: 8%;
+            background-color: #D91818;
+            position: absolute;
+            right: 575px;
+            cursor: pointer;
+        }
+        .cgamesboxdiv {
+            width: 125px;
+            height: 175px;
+            border-radius: 8%;
+            background-color: blue;
+            position: absolute;
+            left: 495px;
+            cursor: pointer;
+        }
+        /* Poki Box Hover effect */
+        .pokiboxdiv:hover {
+            width: 135px;
+            height: 185px;
+            border-radius: 10%;
+            background-color: #073237;
+        }
+        .frivboxdiv:hover {
+            width: 135px;
+            height: 185px;
+            border-radius: 10%;
+            background-color: #dd3131;
+        }
+        .cgamesboxdiv:hover {
+            width: 135px;
+            height: 185px;
+            border-radius: 10%;
+            background-color: rgb(54, 54, 222);
+        }
+        /* Heading Used For Boxes */
+        .box-head {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 18px;
+            color: rgb(44, 166, 166);
+            margin: 8px;
+        }
+        .web-logo {
+            background: linear-gradient(270deg, rgba(131,128,184,1) 0%, rgba(158,158,199,1) 35%, rgba(0,212,255,1) 100%);
+        }
+        #SelectGame-Header {
+            position: absolute;
+            bottom: 115px;
+            right: 600px;
+            color: #229954;
+            text-decoration: underline;
+        }
+        #GamesSelect {
+            position: absolute;
+            bottom: 90px;
+            right: 700px;
+            background-color:#2E86C1;
+            border-radius: 5px;
+        }
+        #SelectedGame {
+            position: absolute;
+            bottom: 145px;
+            right: 700px;
+            font-size: 20px;
+        }
+        #GamePoki  {
+            color: #032c31;
+        }
+        #GameFriv {
+            color: #D91818;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin-top: -25px;
+            margin-bottom: 15px;
+            padding: 0;
+            background-color: #0E2954;
+            overflow: hidden;
+        }
+        .navbar a {
+            text-decoration: none;
+            padding: 15px;
+            font-size: 35px;
+            color: #4477CE;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+            background-color: #0b2144;
+        }
+        .navbar li {
+            float: left;
+        }
+        .bottom-div {
+            position: absolute;
+            bottom: 25px;
+            right: 725px;
+            font-size: 25px;
+            text-align: center;
+            background-color: #0B2447;
+        }
+    </style>
+    <img src="JGlogo.png" alt="Logo" class="web-logo">
+    <h1 class="web-heading">JimckoGaming</h1>
+    <nav class="navbar">
+        <ul>
+            <li><a href="JGIndex.html">Home</a></li>
+            <li><a href="JGDownloads.html">Downloads</a></li>
+        </ul>
+    </nav>
+    <div class="pokiboxdiv" onclick="window.location.href = 'https://poki.com';">
+        <h1 class="box-head">Poki</h1>
+        <p style="margin: 8px; color: aqua;">Poki.com is one of the popular online gaming websites that provides modern and old games</p>
+    </div>
+    <div class="frivboxdiv" onclick="window.location.href = 'https://friv.com';">
+        <h1 class="box-head">Friv</h1>
+        <p style="margin: 8px; color: aqua;">Friv.com is one of the many online gaming websites it contains some good games</p>
+    </div>
+    <div class="cgamesboxdiv" onclick="window.location.href = 'https://crazygames.com';">
+        <h1 class="box-head">CrazyGames</h1>
+        <p style="margin: 8px; color: aqua;">CrazyGames.com is one of the Largest online gaming websites ONLY GOOD GAMES!</p>
+    </div>
+    <h2 id="SelectGame-Header">Select The Game You Want to Play</h2>
+    <select id="GamesSelect" onchange="SendUserToGame()">
+        <option id="GamePoki" value="https://poki.com/en/g/boxrob">BoxRob</option>
+        <option id="GamePoki" value="https://poki.com/en/g/stick-merge">Stick Merge</option>
+        <option id="GamePoki" value="https://poki.com/en/g/raft-wars-multiplayer">RaftWars Multiplayer</option>
+        <option id="GamePoki" value="https://poki.com/en/g/master-chess">Master Chess</option>
+        <option id="GameFriv" value="https://www.friv.com/z/games/deathchase/game.html">Death Chase</option>
+        <option id="GameFriv" value="https://www.friv.com/z/games/fireboyandwatergirlice/game.html">Fireboy And WaterGirl Ice Temple</option>
+        <option id="GameFriv" value="https://www.friv.com/z/games/motox3m/game.html">Moto X3</option>
+        <option id="GameFriv" value="https://www.friv.com/z/games/adamandeve/game.html">Adam And Eve</option>
+    </select>
+    <p id="SelectedGame"></p>
+    <script src="JGScript.js"></script>
+    <div class="bottom-div">
+        Home Page
+    </div>
+</body>
+</html>
