@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JimckoGaming</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <h1 class="page-heading">JimckoGaming</h1>
+    <style>
+        body {
+            background-color: #003C43;
+            text-align: center;
+        }
+        .page-heading {
+            background-color: #28B463;
+            text-decoration: underline;
+            font-size: 45px;
+            text-align: center;
+            color: #2980B9;
+        }
+        .navbar ul {
+            list-style-type: none;
+            background-color: #1C2833;
+            padding: 0px;
+            margin-top: -30px;
+            overflow: hidden;
+        }
+        .navbar a {
+            color: #9B59B6;
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+            font-size: 25px;
+        }
+        .navbar a:hover {
+            background-color: #17202A;
+            cursor: pointer;
+        }
+        .navbar li {
+            float: left;
+            display: inline;
+        }
+        .web-button {
+            border-radius: 8px;
+            background-color: #269DCA;
+            height: 35px;
+        }
+        .web-button:hover {
+            background-color: #246d88;
+            height: 35px;
+        }
+        #DropdownSelectGame {
+            border-radius: 5px;
+            background-color: #2874A6;
+            position: absolute;
+            bottom: 475px;
+            left: 675px;
+            padding: 4px;
+        }
+        #DropdownSelectedGameLink {
+            font-size: 23px;
+            color: #9B59B6;
+            position: absolute;
+            bottom: 100px;
+            left: 675px;
+        }
+        .game-search input {
+            background-color: #212F3D;
+            border-radius: 5px;
+        }
+    </style>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="JGDownloads.html">Downloads</a></li>
+        </ul>
+    </nav>
+    <a href="https://poki.com" target="_blank">
+        <button class="web-button">Poki</button>
+    </a>
+    <a href="https://friv.com">
+        <button class="web-button">Friv</button>
+    </a>
+    <a href="https://crazygames.com">
+        <button class="web-button">CrazyGames</button>
+    </a>
+    <select id="DropdownSelectGame" onchange="SendUserToGame()">
+        <option value="https://poki.com/en/g/stick-merge">Stick Merge</option>
+        <option value="https://poki.com/en/g/raft-wars-multiplayer">Raft Wars Multiplayer</option>
+        <option value="https://poki.com/en/g/death-chase">Death Chase</option>
+        <option value="https://poki.com/en/g/box-rob">BoxRob</option>
+    </select>
+    <script src="JGScript.js"></script>
+    <p id="DropdownSelectedGameLink" style="text-decoration: none;"></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form  class="game-search" id="GameSearchForm" action="JGScript.js" method="post">
+        <label for="game">Game:</label>
+        <input type="text" required placeholder="BoxRob" id="GameSearchInput">
+
+        <!-- Submit Button -->
+        <input type="submit">
+    </form>
+</body>
+</html>
