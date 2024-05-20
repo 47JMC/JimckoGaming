@@ -9,7 +9,8 @@ musicdirs = ["Default","Custom"]
 order_musicdirs = "\n".join(musicdirs)
 
 #Defining and ordering music files
-default_dir = "C:/Users/jarah/Music/Playlists"
+user = os.getlogin()
+default_dir = f"C:/Users/{user}/Music/Playlists"
 order_default_dir = "\n".join(os.listdir(default_dir))
 
 def play_music(path):
