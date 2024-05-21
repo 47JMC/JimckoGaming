@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hajj Dashboard</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: #070F2B;
+            text-align: center;
+        }
+        .hajj-heading {
+            color: #535C91;
+        }
+        .background-img {
+            height: 75%;
+            width: 75%;
+        }
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-500px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+        .countdown {
+            display: grid;
+            place-items: center;
+            background-color: #04091d;
+            border-radius: 28px;
+            animation: slideIn 1s ease-in 0 1 normal forwards;
+        }
+        .countdown p {
+            font-size: 23px;
+            color: #7077A1;
+            animation: slideIn 1s ease-in 0 1 normal forwards;
+        }
+    </style>
+    <script src="JGScript.js"></script>
+    <h1 class="hajj-heading">31/May/2024</h1>
+    <div class="countdown">
+        <p id="days"></p>
+        <p id="months"></p>
+        <p id="years"></p>
+    </div>
+</body>
+</html>

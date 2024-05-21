@@ -20,3 +20,34 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = "https://poki.com/en/g/" + Modedgamename
     });
 });
+
+// Function to get date, month , year
+function doCountdown() {
+    let today = new Date();
+    let date = today.getDate()
+    let month = today.getMonth() + 1
+    let year = today.getFullYear();
+
+    let hajj_date = "31"
+    let hajj_month = "5"
+    let hajj_year = "2024"
+
+    let remaining_days = hajj_date - date
+    let remaining_months = hajj_month - month
+    let remaining_years = hajj_year - year
+
+    console.log(remaining_days, remaining_months, remaining_years)
+
+    document.getElementById("days").innerHTML = remaining_days + " Days Remaining";
+    document.getElementById("months").innerHTML = remaining_months + " Months Remaining";
+    document.getElementById("years").innerHTML = remaining_years + " Years Remaining";
+
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to run on a specific page
+    doCountdown() 
+    console.log("This function runs only on the specified page!");
+        // Your function code here
+    
+});
