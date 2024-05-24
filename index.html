@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JimckoGaming</title>
-    <link rel="icon" type="image/x-icon" href="images/JGLogo.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
@@ -55,9 +54,6 @@
         #DropdownSelectGame {
             border-radius: 5px;
             background-color: #2874A6;
-            position: absolute;
-            bottom: 475px;
-            left: 675px;
             padding: 4px;
         }
         #DropdownSelectedGameLink {
@@ -69,14 +65,19 @@
         }
         .game-search input {
             background-color: #212F3D;
-            border-radius: 5px;
+            color: #2b809f;
+            border-radius: 8px;
+        }
+        .game-search input:hover {
+            background-color: #16202a;
+            border-radius: 3px;
         }
     </style>
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="JGDownloads.html">Downloads</a></li>
-            <li><a href="JGHajj.html">Hajj</a></li>
+            <li><a href="JGHajj.html" target="_blank">Hajj</a></li>
         </ul>
     </nav>
     <a href="https://poki.com" target="_blank">
@@ -88,6 +89,8 @@
     <a href="https://crazygames.com">
         <button class="web-button">CrazyGames</button>
     </a>
+    <br>
+    <br>
     <select id="DropdownSelectGame" onchange="SendUserToGame()">
         <option value="https://poki.com/en/g/stick-merge">Stick Merge</option>
         <option value="https://poki.com/en/g/raft-wars-multiplayer">Raft Wars Multiplayer</option>
@@ -96,9 +99,6 @@
     </select>
     <script src="JGScript.js"></script>
     <p id="DropdownSelectedGameLink" style="text-decoration: none;"></p>
-    <br>
-    <br>
-    <br>
     <br>
     <br>
     <form  class="game-search" id="GameSearchForm" action="JGScript.js" method="post">
